@@ -1,0 +1,13 @@
+<section class="bg-slate-600 w-1/2 mx-auto my-5 px-10 py-5 rounded-lg grid grid-cols-2">
+    <form class="flex flex-col col-span-1" (submit)="onClick($event)">
+        <h2 class="text-xl font-bold">Upload an image of your favorite dish</h2>
+
+        <input type="file" accept="image/*" name="image" required (change)="onImageSelected($event)" class="text-stone-300 h-50 border border-dashed rounded-lg my-5 flex justify-center items-center" title="Upload an image" />
+
+        <button type="submit" class="bg-slate-600 px-5 py-2">Submit</button>
+    </form>
+
+    <div class="col-span-1 border-l px-3">
+        <h2 class="text-xl font-bold">AI Response</h2>
+    </div>
+</section>
