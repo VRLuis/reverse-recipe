@@ -1,4 +1,8 @@
+import { DetectedLabel } from "../detected-label.interface";
+
 export interface BaseResponseInterface {
     status: number,
-    message: string
+    message: string,
+    labels?: DetectedLabel[],
+    recipes?: string
 }

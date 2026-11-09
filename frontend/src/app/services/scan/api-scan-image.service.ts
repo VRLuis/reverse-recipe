@@ -5,10 +5,14 @@ import { BaseResponseInterface } from '../../interfaces/response/base-response.i
 
 @Service()
 export class ApiScanImageService extends ServerApiService {
-    public connect(image: File): Observable<BaseResponseInterface> {
+    public scanImage(image: File): Observable<BaseResponseInterface> {
         const formData = new FormData();
         formData.append('image', image);
 
         return this.getHttp().post<BaseResponseInterface>(`${this.baseUrl}/scan`, formData);
+    }
+
+    public generateRecipes(text: string): Observable<BaseResponseInterface> {
+        return this.getHttp().post<BaseResponseInterface>(`${this.baseUrl}/recipes`, { text });
     }
 }
