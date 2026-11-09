@@ -1,0 +1,6 @@
+boto3
+botocore
+Flask
+Flask-Cors
+python-dotenv
+google-genai
